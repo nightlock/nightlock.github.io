@@ -1732,6 +1732,7 @@ init_mathjax();
 <body>
   <header role="banner"><hgroup>
   <h1><a href="http://nightlock.github.io/">Nightlock</a></h1>
+    <h2>nightlock.github.io</h2>
 </hgroup></header>
   <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="http://nightlock.github.io/" rel="subscribe-rss">RSS</a></li>
@@ -1790,8 +1791,8 @@ init_mathjax();
 </pre></div>
 
 
-<p>2 - 把剛剛算出來的公鑰用SHA256 hash一次。hash可以把公鑰變短，而且假如未來出現了
-攻擊ECDSA的方法，hash過至少讓公鑰不被人知道。</p>
+<p>2 - 把剛剛算出來的公鑰用SHA256 hash一次。hash可以把公鑰變短，而且假如未來出現了攻擊
+ECDSA的方法，hash過至少讓公鑰不被人知道。</p>
 <div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">step2</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">pub</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;hex&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">step2</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;hex&#39;</span><span class="p">)</span>
 <span class="go">&#39;e5cd2593e6ad5bad3f4e419208aee3ee0f42bb6170a3bf6e6419b8f5e713c89b&#39;</span>
@@ -1896,7 +1897,7 @@ init_mathjax();
   <section>
    <h1>Make a Donation</h1>
    <ul id="donate_addr">
-		<li><img src="http://nightlock.github.io/13G3U.png"></li>
+		<li><img src="http://nightlock.github.io/13G3U.PNG"></li>
 	</ul>
 	<h6>13G3U4vXLGYYomw29yfV7Uj6xpWLd52RoR</h6>
    </section>
