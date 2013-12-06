@@ -1813,14 +1813,14 @@ ECDSA的方法，hash過至少讓公鑰不被人知道。</p>
 </pre></div>
 
 
-<p>4 - 在步驟2的結果前面加上一個byte的network ID，比特幣main net是00，testnet是6f，Namecoin是34。</p>
+<p>4 - 在步驟3的結果前面加上一個byte的network ID，比特幣main net是00，testnet是6f，Namecoin是34。</p>
 <div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">step4</span> <span class="o">=</span> <span class="s">&#39;</span><span class="se">\x00</span><span class="s">&#39;</span><span class="o">+</span><span class="n">step3</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">step4</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;hex&#39;</span><span class="p">)</span>
 <span class="go">&#39;0098c27b77db11b8bbbe2ebd57441dea49af0dc5cc&#39;</span>
 </pre></div>
 
 
-<p>5 - 把步驟4a的結果用SHA-256再算一次</p>
+<p>5 - 把步驟4的結果用SHA-256再算一次</p>
 <div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">step5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">step4</span><span class="p">)</span><span class="o">.</span><span class="n">digest</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">step5</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s">&#39;hex&#39;</span><span class="p">)</span>
 <span class="go">&#39;e5d8642956a15509f514417f1f632a010e42b06da40d411eab379540850fc5b4&#39;</span>
